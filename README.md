@@ -6,10 +6,25 @@ Chrome Extension for Switching Google Account in Web Apps
 
 - 📦 NEW: Support for Google meet
 
+## How to use?
+
+Since this is a fork you will have to custom load it. To load the custom extension in Chrome, please follow these steps:
+
+- Download the latest release of the extension in zip format from the releases page of the repository.
+- Unzip the downloaded file to extract its contents.
+Open the Chrome browser and navigate to the "Manage Extensions" page. You can access this page by clicking on the three-dot menu icon in the - top right corner of the browser window and selecting "More Tools" > "Extensions."
+Enable developer mode by toggling the switch located in the top right corner of the "Manage Extensions" page. This allows you to load - unpacked extensions.
+After enabling developer mode, you will see a new button labeled "Load Unpacked" appear at the top left corner of the page. Click on this - button.
+- A file selection dialog will open. Navigate to the folder that you extracted from the downloaded zip file in step 2, and select it.
+- Once you've selected the folder, click on the "Open" button to load the custom extension.
+- The extension will now be loaded and activated in Chrome. You should see its icon appear in the Chrome toolbar or extension area.
+You can customize the extension's settings, such as the shortcut key, by visiting the following URL in the Chrome browser: chrome://- extensions/shortcuts. Change the desired shortcut key according to your preference.
+
+That's it! You have successfully loaded the custom extension in Chrome. Now you can use the extension to switch between multiple Google accounts seamlessly while using various Google apps.
 
 ---
 
-Archived Readme from the fork of `sidehustlelab/account-switcher`
+## Archived Readme from the fork of `sidehustlelab/account-switcher`
 
 #### Download and install from the [Chrome Store](https://chrome.google.com/webstore/detail/google-app-account-switch/gkdjdghoaaooagapfhmjgnagiigocjob/related?) | [Firefox Store](https://addons.mozilla.org/en-GB/firefox/addon/account-switcher-google-apps/)
 
