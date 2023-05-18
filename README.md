@@ -4,7 +4,8 @@ Chrome Extension for Switching Google Account in Web Apps
 
 ## What's new?
 
-- 📦 NEW: Support for Google meet
+- 📦 NEW: Support for Google Meet
+- 📦 NEW: Chrome extension manifest v3 support
 
 ## How to use?
 
