@@ -5,22 +5,27 @@ chrome.runtime.onMessage.addListener(function (command) {
 		var update_url_regex = null;
 		var update_acc = null;
 
+		console.log(`START`);
+
+		const google_meet_regex = '.*meet.google.com/([a-z0-9-]+).*';
+		if (current_url.match(google_meet_regex)) {
+			var meeting_id = current_url.match(google_meet_regex)[1];
+			update_url_regex = RegExp(meeting_id);
+			update_acc = meeting_id + '?pli=1&authuser=' + account_num;
+		}
+
 		const google_regex_type1 = '.*.google.*/u/[0-9].*';
 		if (current_url.match(google_regex_type1)) {
+			console.log(`OTHER`);
 			update_url_regex = RegExp('u/[0-9]');
 			update_acc = 'u/' + account_num;
 		}
 
 		const google_regex_type2 = '.*.google.*?authuser=[0-9].*';
 		if (current_url.match(google_regex_type2)) {
+			console.log(`OTHER`);
 			update_url_regex = RegExp('authuser=[0-9]');
 			update_acc = 'authuser=' + account_num;
-		}
-
-		const meet_regex = 'https://meet.google.com/.*';
-		if (current_url.match(meet_regex)) {
-			// Add account switching parameter to the URL
-			current_url += '?authuser=' + account_num;
 		}
 
 		if (update_acc && update_url_regex) {
