@@ -17,6 +17,12 @@ chrome.runtime.onMessage.addListener(function (command) {
 			update_acc = 'authuser=' + account_num;
 		}
 
+		const meet_regex = 'https://meet.google.com/.*';
+		if (current_url.match(meet_regex)) {
+			// Add account switching parameter to the URL
+			current_url += '?authuser=' + account_num;
+		}
+
 		if (update_acc && update_url_regex) {
 			current_url = current_url.replace(update_url_regex, update_acc);
 			console.log(current_url);
