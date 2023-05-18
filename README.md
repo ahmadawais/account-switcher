@@ -1,12 +1,22 @@
 # account-switcher
+
 Chrome Extension for Switching Google Account in Web Apps
+
+## What's new?
+
+- 📦 NEW: Support for Google meet
+
+
+---
+
+Archived Readme from the fork of `sidehustlelab/account-switcher`
 
 #### Download and install from the [Chrome Store](https://chrome.google.com/webstore/detail/google-app-account-switch/gkdjdghoaaooagapfhmjgnagiigocjob/related?) | [Firefox Store](https://addons.mozilla.org/en-GB/firefox/addon/account-switcher-google-apps/)
 
 ### What does the extension do ?
 This extension is for people using multiple Google accounts in their browser.
 It often becomes a hassle switching between the different accounts for various Google apps like Gmail, Google Docs, Google Play Music, Google Drive etc.
-This extension gives you the ability to switch across accounts seamlessly using keyboard shortcuts in Chrome. 
+This extension gives you the ability to switch across accounts seamlessly using keyboard shortcuts in Chrome.
 
 So google gives logged in accounts numbers: 0, 1, 2...
 ![image](https://user-images.githubusercontent.com/36476228/79776588-9b584900-8353-11ea-9ddb-ec6aa25fa018.png)
@@ -27,5 +37,5 @@ Say you have gmail account 0 open, you can press `Alt+2` to open the gmail accou
 
 
 ### Customization
- 
+
 You can change the shortcut key from default `Alt + <num>` to any preferred shortcut key. Change them on chrome://extensions/shortcuts
