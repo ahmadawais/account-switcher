@@ -1,29 +1,33 @@
 {
-  "name": "Account Switcher for Google Apps",
-  "description": "Use Alt + <num> key to switch between google accounts for various google apps like Gmail, Play music, Google Drive etc",
-  "version": "1.7.0",
-  "manifest_version": 2,
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "permissions": ["tabs"], 
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["key_event.js"], 
-      "run_at": "document_start"
-    }
-  ],
-  "browser_action": {
-    "default_icon": "images/tabFlipper16.png",
-    "default_popup": "popup.html",
-    "default_title": "Use Alt + <num> key to switch between google accounts"
-  },
-  "icons": {
-    "16": "images/tabFlipper16.png",
-    "32": "images/tabFlipper32.png",
-    "48": "images/tabFlipper48.png",
-    "128": "images/tabFlipper128.png"
-  }
+	"name": "Account Switcher for Google Apps",
+	"description": "Use Alt + <num> key to switch between Google accounts for various Google apps like Gmail, Play music, Google Drive, etc.",
+	"version": "1.7.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_icon": {
+			"16": "images/tabFlipper16.png",
+			"32": "images/tabFlipper32.png",
+			"48": "images/tabFlipper48.png",
+			"128": "images/tabFlipper128.png"
+		},
+		"default_popup": "popup.html",
+		"default_title": "Use Alt + <num> key to switch between Google accounts"
+	},
+	"host_permissions": ["*://*/*"],
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["key_event.js"],
+			"run_at": "document_start"
+		}
+	],
+	"icons": {
+		"16": "images/tabFlipper16.png",
+		"32": "images/tabFlipper32.png",
+		"48": "images/tabFlipper48.png",
+		"128": "images/tabFlipper128.png"
+	}
 }
